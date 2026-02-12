@@ -1,0 +1,31 @@
+@use 'variables';
+
+.header{
+    background-image: url(../images/bannerXx.png);
+    background-repeat: no-repeat;
+
+    @media (max-width: 428px) {
+        background-image: url(../images/banner_mb.png);
+        background-size: cover;
+    }
+
+
+    h2{
+        text-align: center;
+        padding-top: 1em;
+        font-size: 5.5em;
+        color: white;
+        text-shadow: -9px 7px 6px variables.$pink1;
+        letter-spacing: 7px;
+        font-family: variables.$fontPrincipal;
+
+        @media (max-width: 659px) {
+            font-size: 5em;
+        }        
+
+        @media (max-width: 428px) {
+            font-size: 3em;
+        }
+
+}
+}
