@@ -1,0 +1,68 @@
+@use 'variables';
+
+.body__blog {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    @media (max-width:678px) {
+        grid-template-columns: 1fr;
+        
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    &__main {
+        background-color: black;
+        padding: 17px;
+        text-align: center;
+        color: white;
+
+        &__img1 {
+            height: 150px;
+        }
+
+        &__count {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5.9px);
+            padding: 20px;
+            border-radius: 5px;
+            animation: pulse-glow 3s infinite;
+            margin: 10px;
+
+            @keyframes pulse-glow {
+                0%,
+                100%{
+                    transform: scale(1);
+                    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+                }
+                50%{
+                    transform: scale(1.01);
+                    box-shadow: 0 0  30px rgba(255, 192, 203, 0.5);
+                }
+            }
+
+            h2 {
+                font-family: variables.$fontPrincipal;
+                letter-spacing: 5px;
+                font-size: 2em;
+
+                span {
+                    color: black;
+                    font-family: variables.$fontSecundaria;
+                    text-shadow: -2px 2px 3px variables.$pink1;
+                }
+            }
+        }
+
+        p {
+            a {
+                color: variables.$pink3;
+                cursor: pointer;
+            }
+
+            margin-bottom: 1.5em;
+        }
+    }
+}
